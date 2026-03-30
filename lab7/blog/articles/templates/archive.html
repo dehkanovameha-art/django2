@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<div style="display: flex; justify-content: flex-end; gap: 10px;">
+    <a href="/login/" class="btn-green">Вход</a>
+    <a href="/register/" class="btn-green">Регистрация</a>
+</div>
+    <meta charset="UTF-8">
+    <title>Все статьи</title>
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+<body class="archive">
+
+<div class="header">
+    <img  class = "header-logo" src="{% static 'img/dpb-logo.png %}">
+</div>
+
+<h1>Все статьи</h1>
+<a href="/article/new/">➕ Создать новую статью</a>
+
+{% for post in posts %}
+<div class="one-post">
+    <h2 class="post-title">
+<a href="/article/{{ post.id }}/">{{ post.title }}</a>
+</h2>
+<button class="fold-button">свернуть</button>
+<div class="article-author">Автор</div>
+<div class="article-created-date">Дата</div>
+<div class="article-text">Текст статьи</div>
+   <p class="article-text">{{post.text|truncatewords:20 }}</p> 
+    <div class="post-meta">
+      
+  <span class="article-author">{{ post.author }}</span> |
+        <span class="article-created-date">{{ post.created_date }}</span>
+
+    </div>
+    <p>{{ post.text|truncatewords:20 }}</p>
+</div>
+{% endfor %}
+<script src="{{ STATIC_URL }}js/fold-post.js"></script>
+</body>
+</html>
+<script src="{% static 'js/helloworld.js' %}"></script>
+<script src="{% static 'js/fold-post.js' %}"></script>
+</body>
+</html>
