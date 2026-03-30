@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Все статьи</title>
+
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+
+<body class="archive">
+
+<!-- НОВАЯ ШАПКА -->
+<div class="header">
+
+    <img class="logo" src="{% static 'dpb-logo.png' %}">
+
+    <div class="header-text-area">
+        <p class="service-title">Коллективный блог</p>
+        <a href="/register/" class="register-link">Регистрация</a>
+        <a href="/login/" class="register-link">Вход</a>
+    </div>
+
+    <div class="icons-for-parallax">
+        <img class="icon-for-parallax-first" src="{% static 'article-icon-for-parallax.png' %}">
+        <img class="icon-for-parallax-second" src="{% static 'article-icon-for-parallax.png' %}">
+        <img class="icon-for-parallax-third" src="{% static 'article-icon-for-parallax.png' %}">
+    </div>
+
+</div>
+
+<h1>Все статьи</h1>
+
+<a href="/article/new/">➕ Создать новую статью</a>
+
+{% for post in posts %}
+<div class="one-post">
+
+    <h2 class="post-title">
+        <a href="/article/{{ post.id }}/">{{ post.title }}</a>
+    </h2>
+
+    <button class="fold-button">свернуть</button>
+
+    <div class="article-author">{{ post.author }}</div>
+    <div class="article-created-date">{{ post.created_date }}</div>
+
+    <div class="article-text">
+        {{ post.text|truncatewords:20 }}
+    </div>
+
+    <div class="one-post-shadow"></div>
+
+</div>
+{% endfor %}
+
+<!-- JS -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/fold-post.js' %}"></script>
+<script src="{% static 'js/highlight-post.js' %}"></script>
+<script src="{% static 'js/parallax.js' %}"></script>
+
+</body>
+</html>

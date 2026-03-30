@@ -1,0 +1,179 @@
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+}
+
+.header img {
+    display: block;
+    width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.archive, .article {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.post-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.article-author {
+    width: 50%;
+    float: left;
+}
+
+.article-created-date {
+    text-align: right;
+}
+.content {
+    width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+textarea {
+    height: 150px;
+}
+
+.errors {
+    color: red;
+    margin-top: 10px;
+}
+
+body {
+    background:#1abc9c(to right, #3ca55c, #b5ac49);
+    color: white;
+    font-family: Arial;
+}
+
+.content {
+    width: 600px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.errors {
+    color: red;
+    margin-top: 10px;
+}
+.one-post.folded .article-author {
+    display: none;
+}
+
+.one-post.folded .article-created-date {
+    display: none;
+}
+
+.one-post.folded .article-text {
+    display: none;
+}
+.one-post {
+    position: relative;
+}
+
+.one-post-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0;
+    z-index: -1;
+}
+
+.header {
+    background-color: #2c3e50;
+    padding: 20px;
+    color: white;
+    overflow: hidden;
+}
+
+.logo {
+    width: 80px;
+}
+
+.header-text-area {
+    float: left;
+    width: 300px;
+}
+
+.service-title {
+    font-size: 24px;
+}
+
+.register-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+/* ===== ПАРАЛЛАКС ===== */
+
+.header {
+    background-color: #9fd3c7;
+    color: white;
+    padding: 20px;
+}
+
+.header-text-area {
+    float: left;
+    width: 40%;
+}
+
+.service-title {
+    font-size: 32px;
+}
+/* контейнер */
+.icons-for-parallax {
+    float: right;
+    margin-top: 100px;
+    height: 400px;
+    width: 300px;
+    position: relative;
+}
+
+.icons-for-parallax img {
+    position: absolute
+}
+
+
+.icons-for-parallax .icon-for-parallax-first {
+    width: 200px;
+    z-index: 3;
+    bottom: 30px;
+    left: 0px;
+}
+
+.icons-for-parallax .icon-for-parallax-second {
+    width: 170px;
+    z-index: 2;
+    bottom: 120px;
+    left: 60px;
+}
+
+.icons-for-parallax .icon-for-parallax-third {
+    width: 150px;
+    z-index: 1;
+    bottom: 200px;
+    left: 120px
+}
+body {
+    background:#green(to right, #3ea55c, #b5ac49f);
+    color: white;
+}
+
