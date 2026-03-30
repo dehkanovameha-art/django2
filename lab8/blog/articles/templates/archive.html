@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Все статьи</title>
+
+    <link rel="stylesheet" href="{% static 'css/article.css' %}">
+</head>
+
+<body class="archive">
+
+<div style="display: flex; justify-content: flex-end; gap: 10px;">
+    <a href="/login/" class="btn-green">Вход</a>
+    <a href="/register/" class="btn-green">Регистрация</a>
+</div>
+
+<div class="header">
+    <img src="{% static 'dpb-logo.png' %}" class="logo">
+</div>
+
+<h1>Все статьи</h1>
+
+<a href="/article/new/">➕ Создать новую статью</a>
+
+{% for post in posts %}
+<div class="one-post">
+
+    <h2 class="post-title">
+        <a href="/article/{{ post.id }}/">{{ post.title }}</a>
+    </h2>
+
+    <button class="fold-button">свернуть</button>
+
+    <div class="article-author">{{ post.author }}</div>
+    <div class="article-created-date">{{ post.created_date }}</div>
+
+    <div class="article-text">
+        {{ post.text|truncatewords:20 }}
+    </div>
+
+    <div class="one-post-shadow"></div>
+
+</div>
+{% endfor %}
+
+<!-- JS ПОДКЛЮЧЕНИЕ -->
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/helloworld.js' %}"></script>
+<script src="{% static 'js/fold-post.js' %}"></script>
+<script src="{% static 'js/highlight-post.js' %}"></script>
+
+</body>
+</html>
